@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import NavBar from './components/NavBar.jsx'
-import HeroSection from './components/HeroSection.jsx'
 import Dashboard from './components/Dashboard.jsx'
-import CourseProgress from './components/CourseProgress.jsx'
-import QuickLessons from './components/QuickLessons.jsx'
+import MainBody from './components/MainBody.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,9 +10,7 @@ function App() {
     <>
       <NavBar />
       <Dashboard />
-      <CourseProgress />
-      <QuickLessons />
-      <HeroSection />
+      <MainBody />
     </>
   )
 }

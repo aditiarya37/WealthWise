@@ -1,0 +1,146 @@
+/* Make the main layout take up the full page */
+.main-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Hero Section - Covers 70% of the page width */
+.hero-section {
+    flex: 1; /* Takes remaining space */
+    width: 59.5vw; /* Explicitly set to 70% of the viewport width */
+    height: 52vh; /* Full height */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+/* Expand Button - Top Right */
+.expand-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* Hero Image Container */
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Hero Image - Covers 80% */
+.hero-image {
+    width: 80%; /* Only covers 80% of the container */
+    max-width: 800px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Hero Overlay - Smaller Text */
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 14px; /* Reduced font size */
+    font-weight: bold;
+    width: 70%;
+    margin-top: 25px;
+}
+
+/* Start Learning Button - Left Aligned */
+.start-learning-btn {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: -560px;
+    text-align: left; /* Left align */
+    display: inline-block;
+}
+
+/* Progress Section */
+.progress-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Progress Title */
+.progress-title {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-right: 505px;
+    margin-bottom: 5px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    max-width: 700px;
+    height: 8px;
+    background: lightgray;
+    border-radius: 5px;
+    margin: 5px auto;
+    overflow: hidden;
+}
+
+/* Progress Fill */
+.progress-fill {
+    height: 100%;
+    background: black;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Progress Text */
+.progress-text {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-right: 612px;
+    color: rgb(84, 84, 84);
+}
+
+/* Start Now Button */
+
+.start-now-btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 89px;
+    width: 690px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #e3e0e0;
+    border-radius: 8px;
+}
+
+.start-now-btn-title {
+    font-weight: 600;
+}
+
+.start-now-btn {
+    background: black;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    /* margin: 10px auto; */
+}

@@ -13,7 +13,7 @@ const Dashboard = () => {
           </button>
         </div>
         <p className="level-subtext">
-          Keep Going you are making great progress
+          Keep Going you are making great progress!
         </p>
         <div className="progress-bar">
           <div className="progress-fill"></div>

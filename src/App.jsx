@@ -12,9 +12,9 @@ function App() {
     <>
       <NavBar />
       <Dashboard />
-      <HeroSection />
       <CourseProgress />
       <QuickLessons />
+      <HeroSection />
     </>
   )
 }

@@ -1,0 +1,86 @@
+.course-progress-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin-left: 20px;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .mission-card {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e3e0e0;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .badge-green {
+    background: #d4f8d4;
+    color: #2e7d32;
+  }
+  
+  .badge-yellow {
+    background: #fff3cd;
+    color: #b8860b;
+  }
+  
+  .badge-red {
+    background: #f8d7da;
+    color: #b71c1c;
+  }
+  
+  .xp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  .mission-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    background: #ddd;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .progress {
+    height: 6px;
+    border-radius: 5px;
+  }
+  
+  .progress-green {
+    background: #2e7d32;
+  }
+  
+  .progress-yellow {
+    background: #b8860b;
+  }
+  
+  .progress-red {
+    background: #b71c1c;
+  }
+  

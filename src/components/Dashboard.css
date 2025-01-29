@@ -1,0 +1,101 @@
+/* Main Container */
+.dashboard-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Level Progress Card */
+  .level-card {
+    background: white;
+    padding: 15px;
+    border: rgb(53, 51, 51);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    border-radius: 10px;
+    /* border: 2px solid #c6c4c4; */
+  }
+  
+  .level-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .level-subtext {
+    color: gray;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Customize Avatar Button */
+  .customize-avatar {
+    background: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    width: 60%;
+    height: 100%;
+    border-radius: 5px;
+    background: black;
+  }
+  
+  /* Daily Streaks Card */
+  .streak-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+  }
+  
+  .streak-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .streak-count {
+    font-weight: bold;
+  }
+  
+  .streak-dots {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+  }
+  
+  .checked {
+    background: #d1f7c4;
+    color: green;
+  }
+  
+  .inactive {
+    background: lightgray;
+    color: black;
+  }
+  

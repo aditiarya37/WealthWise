@@ -15,8 +15,8 @@ const Dashboard = () => {
         <p className="level-subtext">
           Keep Going you are making great progress!
         </p>
-        <div className="progress-bar">
-          <div className="progress-fill"></div>
+        <div className="prog-bar">
+          <div className="prog-fill"></div>
         </div>
       </div>
 

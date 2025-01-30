@@ -23,6 +23,13 @@ const missions = [
     progress: 20,
     color: "red",
   },
+  {
+    level: "Extra Hard",
+    title: "Complete an Extra Hard Level Challenge",
+    xp: "+250 Xp",
+    progress: 8,
+    color: "crimson",
+  },
 ];
 
 const CourseProgress = () => {

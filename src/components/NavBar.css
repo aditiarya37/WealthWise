@@ -1,99 +1,119 @@
 /* Navbar Container */
-.navbar {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    background: white;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    padding: 12px 20px;
-    border-radius: 8px;
-    /* border-bottom: 1px solid #03051d; */
-  }
-  
-  /* Logo Styling */
-  .logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    white-space: nowrap;
-  }
-
-  .logo-img {
-    height: 40px; /* Adjust size */
-    width: 40px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 15px;
-  }  
-  
-  .logo-icon {
-    color: #22c55e;
-    font-size: 1.8rem;
-    margin-right: 5px;
-  }
-  
-  .logo-text {
-    color: #333;
-    user-select: none; /* Prevents text selection */
-    -webkit-user-select: none; /* For Safari */
-    -moz-user-select: none; /* For Firefox */
-    -ms-user-select: none; /* For Internet Explorer/Edge */
-  }
-  
-  /* Navigation Links */
-  .nav-links {
-    display: flex;
-    margin-left: 710px;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    font-size: 18px;
-    padding: 5px; /* Add this to maintain spacing */
-  }
-  
-  .nav-links a:hover {
-    background-color: #0a1d3d;
-    color: #ffcd0f;
-    padding: 5px; /* Ensure it's the same as normal state */
-    border-radius: 5px;
-  }
-  
-  /* Right Section (XP, Tokens, Profile) */
-  .nav-right {
-    margin-left: auto; /* Pushes it to the right */
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding-right: 5px; /* Adjust spacing to shift right */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96%;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 12px 20px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-  
-  .xp-box, .token-box {
-    background: #f3f4f6;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-weight: 500;
-    cursor: default;
-  }
-  
-  /* Profile Icon */
-  .profile-icon {
-    font-size: 1.2rem; /* Smaller size */
-    width: 28px;
-    height: 28px;
-    border-radius: 50%; /* Circular */
-    background-color: #f3f4f6;
-    color: #555;
-    cursor: pointer; /* Regular cursor */
-    display: flex;  /* Ensures proper alignment */
-    align-items: center; /* Vertically centers the icon */
-    justify-content: center; /* Horizontally centers the icon */
+/* Default Transparent Navbar */
+.nav-container {
+  background-color: white;
 }
 
-  
+/* When scrolled, the background appears */
+.nav-container.scrolled {
+  background: rgba(202, 202, 203, 0.8); /* Change as needed */
+  backdrop-filter: blur(10px); /* Optional for glass effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.logo-icon {
+  color: #22c55e;
+  font-size: 1.8rem;
+  margin-right: 5px;
+}
+
+.logo-text {
+  color: #333;
+  user-select: none; /* Prevents text selection */
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  margin-left: 545px;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  padding: 5px; /* Add this to maintain spacing */
+}
+
+.nav-links a:hover {
+  background-color: #0a1d3d;
+  color: #ffcd0f;
+  padding: 5px; /* Ensure it's the same as normal state */
+  border-radius: 5px;
+}
+
+/* Right Section (XP, Tokens, Profile) */
+.nav-right {
+  margin-left: auto; /* Pushes it to the right */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 5px; /* Adjust spacing to shift right */
+}
+
+/* XP and Tokens */
+.xp-box, .token-box {
+  background: #f3f4f6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: default;
+}
+
+/* Profile Icon */
+.profile-icon {
+  font-size: 1.2rem; /* Smaller size */
+  width: 28px;
+  height: 28px;
+  border-radius: 50%; /* Circular */
+  background-color: #f3f4f6;
+  color: #555;
+  cursor: pointer; /* Regular cursor */
+  display: flex;  /* Ensures proper alignment */
+  align-items: center; /* Vertically centers the icon */
+  justify-content: center; /* Horizontally centers the icon */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}

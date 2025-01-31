@@ -2,11 +2,11 @@ import React from "react";
 import HeroSection from "./HeroSection";
 import CourseProgress from "./CourseProgress";
 import QuickLessons from "./QuickLessons";
-import "./Dashboard.css";
+import "./MainBody.css";
 
-const Dashboard = () => {
+const MainBody = () => {
   return (
-    <div className="dashboard-container">
+    <div className="mb-container">
       {/* Left Side - Course Progress */}
       <div className="left-section">
         <CourseProgress />
@@ -21,4 +21,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default MainBody;

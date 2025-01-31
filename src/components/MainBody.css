@@ -1,4 +1,4 @@
-.dashboard-container {
+.mb-container {
     display: flex;
     gap: 20px;
     padding: 20px 0px 20px 20px;
@@ -13,5 +13,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-left: 51px;
   }
   

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./NavBar.css";
 import logo from "../assets/WealthWiseIcon.png";
-import profileIcon from "../assets/profileIcon.png";
+import profileIcon from "../assets/ProfileIcon.png";
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,7 +29,7 @@ const NavBar = () => {
       {/* Navigation Links */}
       <div className="nav-links">
         <Link to="/">Home</Link>
-        <Link to="#">Learn</Link>
+        <Link to="/learn">Learn</Link>
         <Link to="/leaderboard">Leaderboard</Link> {/* ✅ Fixed Link */}
         <Link to="#">Insights</Link>
       </div>

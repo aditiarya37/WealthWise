@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./NavBar.css";
 import logo from "../assets/WealthWiseIcon.png";
 import profileIcon from "../assets/profileIcon.png";
@@ -8,11 +9,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,10 +28,10 @@ const NavBar = () => {
 
       {/* Navigation Links */}
       <div className="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Learn</a>
-        <a href="#">Leaderboard</a>
-        <a href="#">Insights</a>
+        <Link to="/">Home</Link>
+        <Link to="#">Learn</Link>
+        <Link to="/leaderboard">Leaderboard</Link> {/* ✅ Fixed Link */}
+        <Link to="#">Insights</Link>
       </div>
 
       {/* XP, Tokens, and Profile */}

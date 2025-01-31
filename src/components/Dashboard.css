@@ -7,7 +7,7 @@
   }
   
   /* Level Progress Card */
-  .level-card {
+  .level-card-db {
     background: white;
     padding: 15px;
     border: rgb(53, 51, 51);
@@ -56,7 +56,7 @@
   }
   
   /* Daily Streaks Card */
-  .streak-card {
+  .streak-card-db {
     background: white;
     padding: 15px;
     border-radius: 10px;

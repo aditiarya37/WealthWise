@@ -75,7 +75,7 @@
 
 .nav-links a:hover {
   background-color: #0a1d3d;
-  color: #ffcd0f;
+  color: white;
   padding: 5px; /* Ensure it's the same as normal state */
   border-radius: 5px;
 }

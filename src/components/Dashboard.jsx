@@ -5,7 +5,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       {/* Level Progress Section */}
-      <div className="level-card">
+      <div className="level-card-db">
         <div className="level-header">
           <h2>Level 3: Explorer</h2>
           <button className="customize-avatar">
@@ -21,7 +21,7 @@ const Dashboard = () => {
       </div>
 
       {/* Daily Streaks Section */}
-      <div className="streak-card">
+      <div className="streak-card-db">
         <div className="streak-header">
           <h3>Daily Streaks</h3>
           <span className="streak-count">5 Days</span>

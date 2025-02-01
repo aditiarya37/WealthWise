@@ -45,6 +45,7 @@ body.modal-open {
     flex: 1;
     display: flex;
     flex-direction: column;
+    text-align: center !important;
     justify-content: space-around;
   }
   
@@ -52,8 +53,10 @@ body.modal-open {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    text-align: center;
     align-items: center;
   }
+  
   
     .auth-header h1 {
         margin-top: 30px;
@@ -112,6 +115,7 @@ body.modal-open {
     width: 80%;
     color: white;
     padding: 10px;
+    text-align: center;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -162,6 +166,7 @@ body.modal-open {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    text-align: center !important;
     transition: color 0.3s ease-in-out;
   }
   

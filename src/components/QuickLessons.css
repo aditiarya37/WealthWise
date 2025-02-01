@@ -5,6 +5,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 100%;
     position: relative;
 }
 
@@ -41,9 +42,12 @@
 }
 
 .lesson-icon {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: black;
+    height: 40px; /* Keeps icon size consistent */
+    width: 40px; /* Fixes icon width to match height */
+    margin-bottom: 10px; /* Adds space between icon and title */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lesson-title {

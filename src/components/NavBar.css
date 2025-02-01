@@ -12,21 +12,17 @@
   z-index: 1000;
   padding: 12px 20px;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Default Transparent Navbar */
-.nav-container {
   background-color: white;
 }
 
-/* When scrolled, the background appears */
+/* Navbar Scroll Effect */
 .nav-container.scrolled {
-  background: rgba(202, 202, 203, 0.8); /* Change as needed */
-  backdrop-filter: blur(10px); /* Optional for glass effect */
+  background: rgba(202, 202, 203, 0.8);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo Styling */
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -51,17 +47,14 @@
 
 .logo-text {
   color: #333;
-  user-select: none; /* Prevents text selection */
-  -webkit-user-select: none; /* For Safari */
-  -moz-user-select: none; /* For Firefox */
-  -ms-user-select: none; /* For Internet Explorer/Edge */
+  user-select: none;
 }
 
-/* Navigation Links */
+/* ✅ Right-Aligned Navigation Links */
 .nav-links {
   display: flex;
-  margin-left: 545px;
   gap: 20px;
+  margin-left: auto; /* Pushes links to the right */
 }
 
 .nav-links a {
@@ -70,50 +63,45 @@
   font-weight: bold;
   transition: all 0.3s ease;
   font-size: 18px;
-  padding: 5px; /* Add this to maintain spacing */
+  padding: 5px;
 }
 
 .nav-links a:hover {
   background-color: #0a1d3d;
   color: white;
-  padding: 5px; /* Ensure it's the same as normal state */
   border-radius: 5px;
 }
 
 /* Right Section (XP, Tokens, Profile) */
 .nav-right {
-  margin-left: auto; /* Pushes it to the right */
   display: flex;
   align-items: center;
   gap: 15px;
-  padding-right: 5px; /* Adjust spacing to shift right */
+  cursor: pointer;
+  padding-left: 20px;
 }
 
-/* XP and Tokens */
-.xp-box, .token-box {
-  background: #f3f4f6;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: 500;
-  cursor: default;
+/* ✅ Responsive Navbar */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 15px;
+  }
 }
 
-/* Profile Icon */
-.profile-icon {
-  font-size: 1.2rem; /* Smaller size */
-  width: 28px;
-  height: 28px;
-  border-radius: 50%; /* Circular */
-  background-color: #f3f4f6;
-  color: #555;
-  cursor: pointer; /* Regular cursor */
-  display: flex;  /* Ensures proper alignment */
-  align-items: center; /* Vertically centers the icon */
-  justify-content: center; /* Horizontally centers the icon */
-}
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.profile-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

@@ -4,7 +4,7 @@ import courseBG from "../assets/CourseBg.webp";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section">
+    <div className="hero-section ">
       {/* Expand Button */}
       <button className="expand-btn">⛶</button>
 

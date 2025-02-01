@@ -10,7 +10,7 @@
 /* Set 70% width for leaderboard and 30% for streak */
 .leaderboard-card {
   flex: 7;
-  height: 110vh;
+  height: 125vh;
   background: white;
   padding: 20px;
   border-radius: 10px;
@@ -32,29 +32,6 @@
   font-weight: bold;
 }
 
-.leaderboard-list-title {
-  margin: 20px 0px 0px 0px;
-  font-weight: 600;
-}
-
-.leaderboard-list-text {
-  font-weight: 500;
-  margin-top: 0px;
-  margin-bottom: 5px;
-}
-
-.leaderboard-list-para {
-  font-weight: 500;
-  color: #777;
-  margin-top: 0px;
-}
-
-/* Styling for Leaderboard */
-.week {
-  color: #555;
-  margin-bottom: 15px;
-}
-
 .league-section {
   margin-bottom: 20px;
 }
@@ -63,23 +40,61 @@
   font-weight: bold;
 }
 
-.league {
-  font-size: 1rem;
+/* League Styling */
+.league-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.league-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: gray;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.league-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.league-text {
+  display: block;
   color: #777;
 }
 
-.league-tier {
+/* Highlighting Current League */
+.current-league {
   font-weight: bold;
+  color: #DAA520; /* Gold color */
+  text-shadow: 0px 0px 10px rgba(218, 165, 32, 0.7); /* Glow effect */
+  transform: scale(1.1); /* Slightly increase size */
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
 }
 
-.gold { color: gold; }
-.silver { color: silver; }
-.bronze { color: #CD7F32; }
-
+/* Leaderboard List */
 .leaderboard-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.leaderboard-list-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.leaderboard-list-text {
+  margin: 0px;
 }
 
 .leaderboard-entry-header {
@@ -99,48 +114,26 @@
   border-radius: 8px;
 }
 
-.rank {
-  font-weight: bold;
-}
-
-.tokens {
-  font-weight: bold;
-  color: #444;
-}
+.gold { color: gold; }
+.silver { color: silver; }
+.bronze { color: #CD7F32; }
 
 /* Streak Section */
-
 .streak-nav {
   display: flex;
   justify-content: space-between;
   margin-top: 130px;
 }
 
-.streak-nav button {
-  background: none;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
+.streak-nav-links {
+  text-decoration: none;
+  color: #777;
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .leaderboard-container {
-    flex-direction: column;
-  }
-  .leaderboard-card, .streak-card {
-    flex: 1;
-    width: 100%;
-  }
-}
-
-
-
 
 .streak-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 10px; /* Space between circles */
+  gap: 10px;
   margin-top: 30px;
 }
 
@@ -153,16 +146,14 @@
   justify-content: center;
   font-size: 14px;
   font-weight: bold;
-  text-align: center;
 }
 
-/* Green-filled circles with ticks */
+/* Checked and Empty Streak Circles */
 .checked {
   background-color: #d4f5d4;
   color: green;
 }
 
-/* Empty circles */
 .empty {
   background-color: white;
   color: black;

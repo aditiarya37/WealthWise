@@ -1,18 +1,92 @@
 .mb-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px 0px 20px 20px;
-  }
-  
+  display: flex;
+  gap: 20px;
+  padding: 20px 0px 20px 20px;
+  flex-wrap: nowrap; /* Default: No wrapping */
+  align-items: flex-start;
+}
+
+/* Default Layout */
+.left-section {
+  width: 33%;
+  min-width: 250px; /* Prevents collapsing too much */
+}
+
+.right-section {
+  width: 61.5%;
+  min-width: 400px; /* Ensures it doesn’t get too small */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Gradual Shrinking */
+@media (max-width: 1200px) {
   .left-section {
     width: 30%;
   }
-  
+
   .right-section {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-left: 51px;
+    width: 65%;
   }
-  
+}
+
+@media (max-width: 1024px) {
+  .left-section {
+    width: 28%;
+  }
+
+  .right-section {
+    width: 68%;
+  }
+}
+
+@media (max-width: 900px) {
+  .left-section {
+    width: 35%;
+  }
+
+  .right-section {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  .left-section {
+    width: 40%;
+  }
+
+  .right-section {
+    width: 55%;
+  }
+}
+
+/* STAY SIDE-BY-SIDE UNTIL 700px */
+@media (max-width: 700px) {
+  .mb-container {
+    flex-wrap: nowrap; /* Allows sections to wrap */
+  }
+
+  .left-section {
+    width: 48%;
+    min-width: 200px;
+  }
+
+  .right-section {
+    width: 48%;
+    min-width: 300px;
+  }
+}
+
+/* STACK LEFT AND RIGHT AT VERY SMALL SIZES */
+@media (max-width: 600px) {
+  .mb-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    min-width: auto;
+  }
+}

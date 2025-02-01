@@ -18,21 +18,10 @@ const Content1 = () => {
           </p>
         </div>
         <div className="card">
-          <p className="card-content-2">
-          Here’s a helpful tip: In banking, ‘credited’ means more money for you, and ‘debited’ means less.
-
-In accounting, it's slightly different but follows the same core idea — tracking what's coming in and going out. Understanding these terms will make banking and budgeting easier for you.
-
-Now that you know the basics, stay tuned for more simple and practical finance tips!"
-          </p>
-        </div>
-        <div className="card">
           <p>
-          Understanding Bank Accounts: Savings vs. Current Accounts
+          Here’s a helpful tip: In banking, ‘credited’ means more money for you, and ‘debited’ means less. A credit transaction adds funds to your account, like receiving your salary or a refund, while a debit transaction deducts money, such as when you pay a bill or make a purchase.
 
-"Did you know that not all bank accounts are the same? Banks offer different types of accounts tailored to meet specific needs. Let's explore the two most common types — savings accounts and current accounts — and how they serve different purposes.
-
-A savings account is ideal for individuals who want a safe place to store their money while earning interest over time. Think of it as a personal piggy bank, but better because your money grows without doing anything!
+In accounting, the concept is similar but focuses on tracking financial movements. A debit typically increases assets or expenses, while a credit increases liabilities or income. Understanding these basics can help you manage your finances better and make informed money decisions.
           </p>
         </div>
       </div>

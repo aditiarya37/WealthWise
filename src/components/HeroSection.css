@@ -35,6 +35,7 @@
 .hero-image-container {
     position: relative;
     width: 100%;
+    cursor: default;
     display: flex;
     justify-content: center;
 }

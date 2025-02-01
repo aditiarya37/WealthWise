@@ -2,28 +2,46 @@ import React, { useState, useEffect } from "react";
 import "./AuthModal.css";
 import logo from "../assets/WealthWiseIcon.png";
 import authImage from "../assets/auth-icon.png";
+import { auth, provider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "../firebase";
 import googleIcon from "../assets/continue-with-google.webp";
 
-const AuthModal = ({ closeModal }) => {
-  const [authType, setAuthType] = useState("login");
+const AuthModal = ({ type, closeModal }) => {
+  const [authType, setAuthType] = useState(type);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"; 
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto"; 
     };
   }, []);
 
-  const handleAuth = () => {
-    console.log(`User ${authType} successful!`);
-    closeModal(); // Redirect to main page
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log("User Info:", result.user);
+      localStorage.setItem("user", JSON.stringify(result.user)); 
+      closeModal(); // Redirect to dashboard
+    } catch (error) {
+      console.error("Google login failed:", error);
+    }
   };
 
-  const handleGoogleLogin = () => {
-    console.log("Google login successful!");
-    closeModal(); // Redirect to main page
+  const handleAuth = async () => {
+    try {
+      if (authType === "signup") {
+        await createUserWithEmailAndPassword(auth, email, password);
+        console.log("User signed up successfully!");
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+        console.log("User logged in successfully!");
+      }
+      localStorage.setItem("user", email);
+      closeModal(); // Redirect to dashboard
+    } catch (error) {
+      console.error("Authentication failed:", error.message);
+    }
   };
 
   return (
@@ -44,7 +62,9 @@ const AuthModal = ({ closeModal }) => {
               </button>
             </div>
 
-            <h3>{authType === "login" ? "Login" : "Sign Up"}</h3>
+            <div className="toggle-auth">
+              <h3>{authType === "login" ? "Login" : "Sign Up"}</h3>
+            </div>
 
             <input 
               type="email" 

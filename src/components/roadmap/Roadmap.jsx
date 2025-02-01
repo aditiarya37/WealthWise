@@ -1,8 +1,11 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import "./Roadmap.css";
 import { FaPlay } from "react-icons/fa";
 
 const Roadmap = () => {
+  const { courseTitle } = useParams(); // Extract course title from URL
+
   const courses = [
     { title: "Understanding Bank Accounts: Savings vs. Current Accounts", unlocked: false, size: "medium" },
     { title: "What is a Bank Statement?", unlocked: false, size: "small" },
@@ -26,9 +29,9 @@ const Roadmap = () => {
     <div className="roadmap-container">
       {/* Header Section */}
       <div className="roadmap-header">
-        <h1>INTRODUCTION TO CRYPTOCURRENCY</h1>
+        <h1>{"Introduction to Debit and Credit Cards"}</h1> {}
         <span className="progress-rdm">
-          <span className="progress-bar-rdm" style={{ width: "50%" }}>0%</span>
+          <span className="progress-bar-rdm" style={{ width: "0%" }}>0%</span>
         </span>
       </div>
 
@@ -37,7 +40,7 @@ const Roadmap = () => {
         {[column1, column2, column3].map((column, colIndex) => (
           <div key={colIndex} className="roadmap-column">
             {column.map((course, index) => (
-              <div key={index} className={`course-card ${course.unlocked ? "unlocked" : "locked"} ${course.size}`}>
+              <div key={index} className={`course-card ${course.unlocked ? "unlocked-rdm" : "locked-rdm"} ${course.size}`}>
                 {course.unlocked ? (
                   <div className="play-icon-container">
                     <FaPlay className="play-icon" />

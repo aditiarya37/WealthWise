@@ -1,7 +1,7 @@
 /* Overall Container */
 .roadmap-container {
     padding: 20px;
-    width: 100%;
+    width: 95%;
     margin: auto;
     margin-top: 85px;
   }
@@ -35,7 +35,7 @@
   .roadmap-content {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Adds spacing between the columns */
+    gap: 40px; /* Adds spacing between the columns */
     margin-top: 30px;
   }
   
@@ -79,7 +79,7 @@
   }
   
   /* Unlocked Cards */
-  .unlocked {
+  .unlocked-rdm {
     background-color: #eef4ff;
     border: 2px solid #0056b3;
     cursor: pointer;
@@ -103,7 +103,7 @@
   }
   
   /* Locked Cards */
-  .locked {
+  .locked-rdm {
     background-color: #e0e0e0;
     color: #777;
     border: 2px solid #bbb;

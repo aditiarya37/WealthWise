@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AuthModal.css";
 import logo from "../assets/WealthWiseIcon.png";
-import authImage from "../assets/auth-icon.png"; 
+import authImage from "../assets/auth-icon.png";
 import { auth, provider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "../firebase";
 import googleIcon from "../assets/continue-with-google.webp";
 
@@ -10,18 +10,25 @@ const AuthModal = ({ type, closeModal }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // Handle Google Login
+  // Lock scrolling when the modal is open
+  useEffect(() => {
+    document.body.style.overflow = "hidden"; // Disable scrolling
+
+    return () => {
+      document.body.style.overflow = "auto"; // Enable scrolling on modal close
+    };
+  }, []);
+
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
       console.log("User Info:", result.user);
-      closeModal(); // Close modal on success
+      closeModal();
     } catch (error) {
       console.error("Google login failed:", error);
     }
   };
 
-  // Handle Email/Password Login
   const handleAuth = async () => {
     try {
       if (authType === "signup") {
@@ -41,9 +48,8 @@ const AuthModal = ({ type, closeModal }) => {
     <div className="auth-overlay">
       <div className="auth-modal">
         <button className="close-btn" onClick={closeModal}>✖</button>
-        
+
         <div className="auth-content">
-          {/* Left Section */}
           <div className="auth-form">
             <div className="auth-header">
               <img src={logo} alt="Wealth Wise" className="auth-logo" />
@@ -81,11 +87,10 @@ const AuthModal = ({ type, closeModal }) => {
 
             <div className="separator">OR</div>
             <button className="google-auth" onClick={handleGoogleLogin}>
-            <img src={googleIcon} alt="Google Logo" className="google-logo" />
+              <img src={googleIcon} alt="Google Logo" className="google-logo" />
             </button>
           </div>
 
-          {/* Right Section */}
           <div className="auth-image">
             <img src={authImage} alt="Financial Success" />
           </div>

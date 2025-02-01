@@ -26,7 +26,7 @@ const Roadmap = () => {
     <div className="roadmap-container">
       {/* Header Section */}
       <div className="roadmap-header">
-        <h2>INTRODUCTION TO CRYPTOCURRENCY</h2>
+        <h1>INTRODUCTION TO CRYPTOCURRENCY</h1>
         <span className="progress-rdm">
           <span className="progress-bar-rdm" style={{ width: "50%" }}>0%</span>
         </span>

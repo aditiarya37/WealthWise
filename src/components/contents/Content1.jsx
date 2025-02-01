@@ -5,6 +5,7 @@ import "./Content1.css";
 const Content1 = () => {
   return (
     <div className="content-container">
+      <h2 className="quiz-title">Resources</h2>
       <div className="content-cards">
         <div className="card">
           <p>

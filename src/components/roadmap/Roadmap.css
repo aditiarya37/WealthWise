@@ -4,10 +4,10 @@
     width: 95%;
     margin: auto;
     margin-top: 85px;
-  }
-  
-  /* Header Section */
-  .roadmap-header {
+}
+
+/* Header Section */
+.roadmap-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,35 +21,35 @@
     max-width: 600px;
     margin: auto;
     text-align: center;
-  }
-  
-  .progress-rdm {
+}
+
+.progress-rdm {
     background-color: white;
     padding: 10px 10px;
     border-radius: 50px;
     border: 2px solid black;
     font-size: 0.6rem;
-  }
-  
-  /* Roadmap Content */
-  .roadmap-content {
+}
+
+/* Roadmap Content */
+.roadmap-content {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Adds spacing between the columns */
+    gap: 40px;
     margin-top: 30px;
-  }
-  
-  /* Columns */
-  .roadmap-column {
+}
+
+/* Columns */
+.roadmap-column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%; /* Ensures equal width for all columns */
-    gap: 20px; /* Increases spacing between cards */
-  }
-  
-  /* Course Cards */
-  .course-card {
+    width: 30%;
+    gap: 20px;
+}
+
+/* Course Cards */
+.course-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,34 +60,42 @@
     font-size: 1rem;
     font-weight: bold;
     box-shadow: 2px 2px 10px rgba(0, 86, 179, 0.1);
-  }
-  
-  /* Different Card Sizes */
-  .large {
+    text-decoration: none; /* Remove default link styles */
+}
+
+/* Different Card Sizes */
+.large {
     width: 400px;
     height: 550px;
-  }
-  
-  .medium {
+}
+
+.medium {
     width: 400px;
     height: 400px;
-  }
-  
-  .small {
+}
+
+.small {
     width: 400px;
     height: 250px;
-  }
-  
-  /* Unlocked Cards */
-  .unlocked-rdm {
+}
+
+/* Unlocked Cards */
+.unlocked-rdm {
     background-color: #eef4ff;
-    border: 2px solid #0056b3;
+    /* border: 2px solid #0056b3; */
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 86, 179, 0.2);
-  }
-  
-  /* Play Button */
-  .play-icon-container {
+    /* transition: transform 0.2s ease-in-out; */
+}
+
+/* Hover effect for unlocked cards */
+.unlocked-rdm:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 12px rgba(0, 86, 179, 0.3);
+}
+
+/* Play Button */
+.play-icon-container {
     background-color: #002b80;
     width: 50px;
     height: 50px;
@@ -95,22 +103,54 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .play-icon {
-    font-size: 24px;
-    color: white;
-  }
-  
-  /* Locked Cards */
-  .locked-rdm {
+}
+
+.play-icon {
+    font-size: 22px;
+    width: 20px;
+    color: rgb(5, 206, 5) !important;
+    background-color: #002b80;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+/* Locked Cards */
+.locked-rdm {
     background-color: #e0e0e0;
-    color: #777;
-    border: 2px solid #bbb;
-  }
-  
-  .lock-icon {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
+    background-color: rgba(10, 29, 61, 0.1);
+    /* border: 1px inset #0a1d3d; */
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lock-icon {
+    font-size: 22px;
+    color: rgba(10, 29, 61, 0.6); /* Your requested dark blue with opacity */
+}
+
+
+.notes-icon {
+    font-size: 22px;
+    color: rgb(109, 211, 255);
+    background-color: #0a1d3d;  /* Dark blue background */
+    padding: 12px;
+    border-radius: 50%;
+}
+
+/* Quiz (Question) icon */
+.quiz-icon {
+    font-size: 22px;
+    color: rgb(234, 234, 31);
+    background-color: #0a1d3d;  /* Dark blue background */
+    padding: 12px;
+    border-radius: 50%;
+}
+
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

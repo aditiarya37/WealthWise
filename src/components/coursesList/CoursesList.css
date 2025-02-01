@@ -1,0 +1,87 @@
+/* Container */
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  }
+  
+  /* Course Title */
+  .course-title {
+    font-size: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 95%;
+  }
+  
+  /* Courses List */
+  .courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Course Cards */
+  .course-card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    height: 50px;
+    padding: 15px 20px;
+    width: 600px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Unlocked Course */
+  .unlocked {
+    background: #f0fdf4;
+    border-left: 5px solid #10b981;
+    width: 90%;
+    margin-left: 50px;
+  }
+
+  .course-link {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* Locked Course */
+  .locked {
+    background: #f9f9f9;
+    width: 90%;
+    margin-left: 50px;
+    cursor: default;
+    border-left: 5px solid #f87171;
+  }
+  
+  /* Icons */
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .play-icon {
+    color: #10b981;
+    font-size: 20px;
+  }
+  
+  .lock-icon {
+    color: #f87171;
+    font-size: 20px;
+  }
+  

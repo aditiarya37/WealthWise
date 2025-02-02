@@ -1,0 +1,83 @@
+.profile-container-pp {
+    width: 85%;
+    margin: auto;
+    margin-top: 85px;
+    padding: 20px;
+  }
+  
+  .profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid #0a1d3d;
+    border-radius: 10px;
+    height: 50vh;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .profile-image {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #0a1d3d;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .overlay-image {
+    position: absolute;
+    bottom: 5px;
+    border-radius: 50%;
+    right: 5px;
+    width: 100px;  /* Adjust size accordingly */
+    height: 100px;
+}
+  
+  .profile-details {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .learning-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .learning-box {
+    width: 45.5%;
+    padding: 20px;
+    height: 150px;
+    border: 2px solid #0a1d3d;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .resume-button,
+  .start-button {
+    background-color: #0a1d3d;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .resume-button:hover,
+  .start-button:hover {
+    box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+    transform: translateY(-5px);
+    border: 2px solid #0a1d3d;
+  }
+  

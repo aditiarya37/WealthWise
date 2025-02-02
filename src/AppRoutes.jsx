@@ -10,6 +10,7 @@ import Roadmap from "./components/roadmap/Roadmap.jsx";
 import Content1 from "./components/contents/Content1.jsx";
 import Quiz1 from "./components/quizes/Quiz1.jsx";
 import AuthModal from "./components/AuthModal.jsx";
+import ProfilePage from "./components/profilePage/ProfilePage.jsx";
 
 const AppRoutes = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -46,6 +47,7 @@ const AppRoutes = () => {
           <Routes>
             <Route path="/" element={<><Dashboard /><MainBody /></>} />
             <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/learn" element={<CoursesList />} />
             <Route path="/roadmap/:courseTitle" element={<Roadmap />} />
             <Route path="/content1" element={<Content1 />} />

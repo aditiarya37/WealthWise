@@ -43,7 +43,7 @@ const CourseProgress = () => {
           <h3 className="mission-title">{mission.title}</h3>
           <div className="progress-bar">
             <div
-              className={`progress progress-${mission.color}`}
+              className={`progress-cp progress-${mission.color}`}
               style={{ width: `${mission.progress}%` }}
             ></div>
           </div>

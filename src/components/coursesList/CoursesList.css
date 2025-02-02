@@ -1,92 +1,161 @@
 /* Container */
 .courses-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
-  }
-  
-  /* Course Title */
-  .course-title {
-    font-size: 30px;
-    padding: 10px 20px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-    background-color: white;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 95%;
-  }
-  
-  /* Courses List */
-  .courses-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: #fff;
-    padding: 30px;
-    width: 90%;
-    border-radius: 12px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Course Cards */
-  .course-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    box-shadow: 2px 2px 10px rgba(0, 86, 179, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
-  
-  /* Unlocked Course */
-  .unlocked {
-    background: #f0fdf4;
-    border-left: 5px solid #10b981 !important;
-    width: 90%;
-    text-decoration: none;
-    color: black;
-    margin-left: 50px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+/* Course Title */
+.course-title {
+  font-size: 30px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 95%;
+  transform: translateY(-10px);
+  animation: slideDown 0.8s ease-in-out forwards;
+}
+
+/* Courses List */
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Cards */
+.course-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  height: 50px;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0, 86, 179, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+/* Unlocked Course */
+.unlocked {
+  background: linear-gradient(145deg, #f0fdf4, #d7ffe0);
+  border-left: 5px solid #10b981 !important;
+  width: 90%;
+  text-decoration: none;
+  color: black;
+  margin-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for unlocked courses */
+.unlocked:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px #33ab83;
+}
+
+/* Locked Course */
+.locked {
+  background: rgba(10, 29, 61, 0.05);
+  width: 90%;
+  margin-left: 50px;
+  color: #777;
+  cursor: default;
+  border-left: 5px solid #f87171 !important;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Soft Pulse Effect on Locked Courses */
+.locked::before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  border-radius: 15px;
+  background: rgba(10, 29, 61, 0.1);
+  top: 2.5%;
+  left: 2.5%;
+  opacity: 0.5;
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.05); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+/* Icons */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+/* Icon animations */
+
+.play-icon {
+  color: green;
+}
+
+.play-icon, .lock-icon {
+  font-size: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Rotate effect on hover */
+.unlocked:hover .play-icon {
+  transform: rotate(15deg);
+}
+
+/* Lock icon remains static */
+.lock-icon {
+  color: #f87171;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course-title {
+      font-size: 24px;
   }
 
-  .course-link {
-    text-decoration: none;
-    color: #000;
+  .courses-list {
+      width: 100%;
+      padding: 20px;
   }
-  
-  /* Locked Course */
-  .locked {
-    background: #f9f9f9;
-    width: 90%;
-    margin-left: 50px;
-    color: #777;
-    cursor: default;
-    border-left: 5px solid #f87171 !important;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+  .course-card {
+      width: 100%;
+      margin-left: 0;
   }
-  
-  /* Icons */
-  .icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .play-icon {
-    color: #10b981 !important;
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-  
-  .lock-icon {
-    color: #f87171;
-    font-size: 20px;
-  }
-  
+}

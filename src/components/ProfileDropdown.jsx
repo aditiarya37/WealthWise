@@ -23,9 +23,9 @@ const ProfileDropdown = () => {
 
         {open && (
           <div className="dropdown-menu">
-            <button className="dropdown-item" onClick={() => handleAuthClick("login")}>Login</button>
-            <button className="dropdown-item" onClick={() => handleAuthClick("signup")}>Signup</button>
-            <button onClick={() => {
+            {/* <button className="dropdown-item" onClick={() => handleAuthClick("login")}>Login</button> */}
+            <button className="dropdown-item" onClick={() => handleAuthClick("signup")}>View Profile</button>
+            <button className="dropdown-item" onClick={() => {
   localStorage.removeItem("user");
   window.location.reload(); // Refresh page to show login modal again
 }}>

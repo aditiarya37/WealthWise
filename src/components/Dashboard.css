@@ -89,6 +89,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  padding: 3px;
   font-size: 14px;
 }
 
@@ -142,4 +143,57 @@
     height: 25px;
     font-size: 12px;
   }
+}
+
+
+
+
+/* Apply Glassmorphism Effect */
+.dashboard-container {
+  backdrop-filter: blur(8px); /* Glass effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+}
+
+/* Level Card - Subtle Neon Glow */
+.level-card-db {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.level-card-db:hover, .streak-card-db:hover {
+  box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Floating Glow Effect */
+/* .level-card-db::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(10, 200, 80, 0.1) 20%, transparent 60%);
+  border-radius: 10px;
+  z-index: -1;
+} */
+
+/* Animate Progress Bar */
+.prog-fill {
+  animation: progressBarAnim 2s ease-in-out;
+}
+
+@keyframes progressBarAnim {
+  from { width: 0%; }
+  to { width: 60%; }
+}
+
+/* Daily Streaks - Bounce Animation */
+.dot.checked {
+  animation: bounceDot 1.2s infinite alternate;
+}
+
+@keyframes bounceDot {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-3px); }
 }

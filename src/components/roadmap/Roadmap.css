@@ -4,6 +4,8 @@
     width: 95%;
     margin: auto;
     margin-top: 85px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 /* Header Section */
@@ -11,24 +13,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    /* background: linear-gradient(135deg, #0a1d3d, #143d59); */
     padding: 15px 25px;
+    background-color: white;
     border-radius: 80px;
     font-weight: bold;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+    cursor: default;
     border: 3px solid #0a1d3d;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
     max-width: 600px;
     margin: auto;
     text-align: center;
+    color: black;
+    animation: slideDown 1s ease-in-out;
 }
 
+/* Progress Bar */
 .progress-rdm {
-    background-color: white;
-    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
     border-radius: 50px;
-    border: 2px solid black;
-    font-size: 0.6rem;
+    border: 2px solid #0a1d3d;
+    font-size: 0.7rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-rdm {
+    display: block;
+    height: 100%;
+    background: linear-gradient(to right, #28a745, #1e90ff);
+    transition: width 0.6s ease-in-out;
 }
 
 /* Roadmap Content */
@@ -49,7 +65,7 @@
 }
 
 /* Course Cards */
-.course-card {
+.course-card-rdm {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,8 +75,19 @@
     border-radius: 15px;
     font-size: 1rem;
     font-weight: bold;
-    box-shadow: 2px 2px 10px rgba(0, 86, 179, 0.1);
-    text-decoration: none; /* Remove default link styles */
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Entrance Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 /* Different Card Sizes */
@@ -81,76 +108,117 @@
 
 /* Unlocked Cards */
 .unlocked-rdm {
-    background-color: #eef4ff;
-    /* border: 2px solid #0056b3; */
+    background: linear-gradient(145deg, #eef4ff, #cfe8ff);
     cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 86, 179, 0.2);
-    /* transition: transform 0.2s ease-in-out; */
+    box-shadow: 2px 2px 15px rgba(0, 86, 179, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Hover effect for unlocked cards */
+/* Unique Glow Effect on Hover */
 .unlocked-rdm:hover {
-    transform: scale(1.02);
-    box-shadow: 3px 3px 12px rgba(0, 86, 179, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #0a1d3d;
+    animation: bounce 0.5s ease-in-out;
+}
+
+/* Bounce Effect */
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 /* Play Button */
 .play-icon-container {
-    background-color: #002b80;
+    background: radial-gradient(circle, #002b80 30%, #143d59);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s ease-in-out;
 }
 
+/* Icons */
+
 .play-icon {
+    background-color: #0a1d3d;
+    border-radius: 8px;
+}
+
+.play-icon, .notes-icon, .quiz-icon {
     font-size: 22px;
-    width: 20px;
-    color: rgb(5, 206, 5) !important;
-    background-color: #002b80;
     padding: 12px;
     border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Icon hover animation */
+.play-icon:hover,
+.notes-icon:hover,
+.quiz-icon:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* Locked Cards */
 .locked-rdm {
-    background-color: #e0e0e0;
-    background-color: rgba(10, 29, 61, 0.1);
-    /* border: 1px inset #0a1d3d; */
+    background: rgba(10, 29, 61, 0.1);
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
 }
 
+/* Soft Pulse Animation for Locked Cards */
+.locked-rdm::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    background: rgba(10, 29, 61, 0.1);
+    top: 5%;
+    left: 5%;
+    opacity: 0.5;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.05); opacity: 0.3; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
+
+/* Lock Icon */
 .lock-icon {
     font-size: 22px;
-    color: rgba(10, 29, 61, 0.6); /* Your requested dark blue with opacity */
+    color: rgba(10, 29, 61, 0.6);
 }
 
-
+/* Notes and Quiz Icons */
 .notes-icon {
     font-size: 22px;
     color: rgb(109, 211, 255);
-    background-color: #0a1d3d;  /* Dark blue background */
-    padding: 12px;
-    border-radius: 50%;
+    background: radial-gradient(circle, #0a1d3d, #143d59);
 }
 
-/* Quiz (Question) icon */
 .quiz-icon {
     font-size: 22px;
     color: rgb(234, 234, 31);
-    background-color: #0a1d3d;  /* Dark blue background */
-    padding: 12px;
-    border-radius: 50%;
+    background: radial-gradient(circle, #0a1d3d, #143d59);
 }
 
-
-.icon-container {
+/* Icon Container */
+.icon-container-rdm {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+/* Hover Effect */
+.icon-container:hover {
+    transform: scale(1.1);
 }

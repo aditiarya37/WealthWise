@@ -147,3 +147,79 @@
     display: block;
     /* margin: 10px auto; */
 }
+
+
+
+
+/* Hero Overlay - Dynamic Fade-in Effect */
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 14px; /* Keeps the original size */
+    font-weight: bold;
+    width: 70%;
+    margin-top: 25px;
+    opacity: 1; /* Ensures it's always visible */
+    animation: none !important; /* Prevents animation override */
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glow Effect for Start Learning Button */
+.start-learning-btn {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: -560px;
+    text-align: left;
+    display: inline-block;
+    opacity: 1 !important; /* Prevents animation from affecting it */
+    transform: none !important;
+}
+
+.start-learning-btn,
+.hero-overlay {
+    animation: none !important;
+}
+
+.start-learning-btn:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+}
+.start-now-btn:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+
+.hero-section:hover {
+    box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+    transform: translateY(-5px);
+  }
+
+  .start-now-btn-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.progress-fill {
+    height: 6px;
+    transform-origin: left;  /* Ensures the animation starts from the left */
+    animation: fillProgress 1.5s ease-in-out forwards;
+  }
+
+@keyframes fillProgress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}

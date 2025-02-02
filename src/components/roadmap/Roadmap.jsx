@@ -43,13 +43,13 @@ const Roadmap = () => {
           <div key={colIndex} className="roadmap-column">
             {column.map((course, index) => (
               course.unlocked ? (
-                <Link key={index} to={course.link} className={`course-card unlocked-rdm ${course.size}`}>
-                  <div className="icon-container">{course.icon}</div>
+                <Link key={index} to={course.link} className={`course-card-rdm unlocked-rdm ${course.size}`}>
+                  <div className="icon-container-rdm">{course.icon}</div>
                   <p>{course.title}</p>
                 </Link>
               ) : (
-                <div key={index} className={`course-card locked-rdm ${course.size}`}>
-                  <div className="icon-container">
+                <div key={index} className={`course-card-rdm locked-rdm ${course.size}`}>
+                  <div className="icon-container-rdm">
                     <FontAwesomeIcon icon={faLock} className="lock-icon" />
                   </div>
                   <p>{course.title}</p>

@@ -45,16 +45,23 @@
     background-color: #0a1d3d;
     color: white;
     text-decoration: none;
-    padding: 12px 20px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-size: 18px;
     margin-left: 1250px;
-    font-weight: bold;
-    border-radius: 30px;
+    /* font-weight: bold; */
+    border-radius: 8px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
   }
   
-  .next-button:hover {
+
+  .card:hover, .next-button:hover {
+    box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+    transform: translateY(-5px);
     background-color: #08162b;
+    cursor: default;
   }
-  
+
+  .next-button:hover {
+    cursor: pointer;
+  }

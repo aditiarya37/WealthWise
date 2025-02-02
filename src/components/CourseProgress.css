@@ -92,3 +92,32 @@
     background: #4a040b;
   }
   
+
+
+  /* Animated Progress Bars */
+  .progress-cp {
+    height: 6px;
+    transform-origin: left;  /* Ensures the animation starts from the left */
+    animation: fillProgress 1.5s ease-in-out forwards;
+  }
+
+@keyframes fillProgress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Glowing XP Badges */
+.xp {
+  text-shadow: 0 0 10px rgba(255, 200, 0, 0.8);
+}
+
+
+.course-progress-container:hover {
+  box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+  transform: translateY(-5px);
+}
+
+.mission-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

@@ -65,6 +65,8 @@
 
 .option:hover {
     background-color: #ddd;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .option input {
@@ -97,5 +99,23 @@
     margin-top: 30px;
     font-size: 20px;
     color: #0a1d3d;
+    cursor: default;
     font-weight: bold;
 }
+
+
+
+
+.quiz-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+    transform: translateY(-5px);
+    cursor: default;
+  }
+
+
+.next-btn:hover, .submit-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+    transform: translateY(-5px);
+    background-color: #08162b;
+  }

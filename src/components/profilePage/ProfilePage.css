@@ -17,6 +17,11 @@
     margin-bottom: 20px;
   }
   
+  .profile-card:hover, .learning-box:hover {
+    box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+    transform: translateY(-5px);
+  }
+
   .profile-header {
     display: flex;
     justify-content: center;

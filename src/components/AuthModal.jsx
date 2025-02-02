@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./AuthModal.css";
 import logo from "../assets/WealthWiseIcon.png";
 import authImage from "../assets/auth-icon.png";
 import { auth, provider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "../firebase";
 import googleIcon from "../assets/continue-with-google.webp";
 
-const AuthModal = ({ type, closeModal }) => {
+const AuthModal = ({ type, closeModal, onAuthSuccess }) => {
   const [authType, setAuthType] = useState(type);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Initialize navigate hook
 
   useEffect(() => {
     document.body.style.overflow = "hidden"; 
@@ -22,7 +24,10 @@ const AuthModal = ({ type, closeModal }) => {
       const result = await signInWithPopup(auth, provider);
       console.log("User Info:", result.user);
       localStorage.setItem("user", JSON.stringify(result.user)); 
-      closeModal(); // Redirect to dashboard
+      
+      closeModal();  // Close the modal
+      onAuthSuccess();  // ✅ Trigger authentication success
+      navigate("/"); // ✅ Redirect to the home page
     } catch (error) {
       console.error("Google login failed:", error);
     }
@@ -38,16 +43,23 @@ const AuthModal = ({ type, closeModal }) => {
         console.log("User logged in successfully!");
       }
       localStorage.setItem("user", email);
-      closeModal(); // Redirect to dashboard
+
+      closeModal(); // Close the modal
+      onAuthSuccess(); // ✅ Trigger authentication success
+      navigate("/"); // ✅ Redirect to the home page
     } catch (error) {
       console.error("Authentication failed:", error.message);
     }
   };
 
+  const handleClose = () => {
+    closeModal();  // Close the modal
+  };
+
   return (
     <div className="auth-overlay">
       <div className="auth-modal">
-        <button className="close-btn" onClick={closeModal}>✖</button>
+        <button className="close-btn" onClick={handleClose}>✖</button>
 
         <div className="auth-content">
           <div className="auth-form">

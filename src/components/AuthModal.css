@@ -28,8 +28,8 @@ body.modal-open {
   
   .close-btn {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 20px;
+    right: 23px;
     background: none;
     border: none;
     font-size: 22px;
@@ -46,6 +46,7 @@ body.modal-open {
     display: flex;
     flex-direction: column;
     text-align: center !important;
+    margin-top: -5px !important;
     justify-content: space-around;
   }
   
@@ -55,6 +56,8 @@ body.modal-open {
     gap: 10px;
     text-align: center;
     align-items: center;
+    margin-top: -20px;
+    margin-bottom: -15px;
   }
   
   
@@ -146,6 +149,7 @@ body.modal-open {
   .auth-image {
     flex: 1;
     cursor: default;
+    margin-right: -40px;
   }
   
   .auth-image img {

@@ -1,6 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./QuickLessons.css";
-// import { FaDollarSign, FaCreditCard, FaChartLine, FaShieldAlt, FaBook, FaBitcoin, FaClipboardList, FaPiggyBank } from "react-icons/fa";
 import walletIcon from "../assets/wallet-icon.png";
 import graphIcon from "../assets/graph-icon.png";
 import piggyBankIcon from "../assets/piggy-bank-icon.png";
@@ -11,7 +11,7 @@ import bitcoinIcon from "../assets/bitcoin-icon.png";
 import shieldIcon from "../assets/shield-icon.png";
 
 const lessons = [
-  { title: "What is Personal Finance?", icon: walletIcon },
+  { title: "Introduction to Credit and Debit", icon: walletIcon },
   { title: "Understanding Interest Rates", icon: graphIcon },
   { title: "How to Save Money", icon: piggyBankIcon },
   { title: "Credit Cards 101", icon: creditCardIcon },
@@ -22,12 +22,19 @@ const lessons = [
 ];
 
 const QuickLessons = () => {
+  const navigate = useNavigate(); // Initialize navigate hook
+
   return (
     <div className="quick-lessons">
       <h2>Get started</h2>
       <div className="lesson-grid">
         {lessons.map((lesson, index) => (
-          <div key={index} className="lesson-card">
+          <div 
+            key={index} 
+            className="lesson-card"
+            onClick={() => index === 0 && navigate("/roadmap/Introduction%20of%20Debit%20and%20Credit%20Cards")} // Navigate only on first lesson click
+            style={{ cursor: index === 0 ? "pointer" : "default" }} // Change cursor for first lesson
+          >
             <span className="lesson-icon">
               <img src={lesson.icon} alt={lesson.title} />
             </span>

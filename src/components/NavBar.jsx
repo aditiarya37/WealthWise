@@ -4,7 +4,7 @@ import "./NavBar.css";
 import logo from "../assets/WealthWiseIcon.png";
 import ProfileDropdown from "./ProfileDropdown"; // Import this
 
-const NavBar = () => {
+const NavBar = ({ hideStats }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,12 +34,14 @@ const NavBar = () => {
         <Link to="#">Insights</Link>
       </div>
 
-      {/* XP, Tokens, and Profile Dropdown */}
-      <div className="nav-right">
-        <div className="xp-box"><span>⭐ 2,740 XP</span></div>
-        <div className="token-box"><span>💎 320 Token</span></div>
-        <ProfileDropdown /> {/* Use Profile Dropdown */}
-      </div>
+      {/* XP, Tokens, and Profile Dropdown (Hidden when hideStats is true) */}
+      {!hideStats && (
+        <div className="nav-right">
+          <div className="xp-box"><span>⭐ 2,740 XP</span></div>
+          <div className="token-box"><span>💎 320 Token</span></div>
+          <ProfileDropdown />
+        </div>
+      )}
     </nav>
   );
 };

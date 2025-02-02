@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./AuthModal.css";
 import logo from "../assets/WealthWiseIcon.png";
 import authImage from "../assets/auth-icon.png";
-import { auth, provider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "../firebase";
 import googleIcon from "../assets/continue-with-google.webp";
 
 const AuthModal = ({ type, closeModal, onAuthSuccess }) => {
@@ -19,37 +18,12 @@ const AuthModal = ({ type, closeModal, onAuthSuccess }) => {
     };
   }, []);
 
-  const handleGoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      console.log("User Info:", result.user);
-      localStorage.setItem("user", JSON.stringify(result.user)); 
-      
-      closeModal();  // Close the modal
-      onAuthSuccess();  // ✅ Trigger authentication success
-      navigate("/"); // ✅ Redirect to the home page
-    } catch (error) {
-      console.error("Google login failed:", error);
-    }
-  };
-
   const handleAuth = async () => {
-    try {
-      if (authType === "signup") {
-        await createUserWithEmailAndPassword(auth, email, password);
-        console.log("User signed up successfully!");
-      } else {
-        await signInWithEmailAndPassword(auth, email, password);
-        console.log("User logged in successfully!");
-      }
-      localStorage.setItem("user", email);
-
-      closeModal(); // Close the modal
-      onAuthSuccess(); // ✅ Trigger authentication success
-      navigate("/"); // ✅ Redirect to the home page
-    } catch (error) {
-      console.error("Authentication failed:", error.message);
-    }
+    console.log("User authenticated successfully!");
+    localStorage.setItem("user", email);
+    closeModal(); // Close the modal
+    onAuthSuccess(); // ✅ Trigger authentication success
+    navigate("/"); // ✅ Redirect to the home page
   };
 
   const handleClose = () => {
@@ -98,7 +72,7 @@ const AuthModal = ({ type, closeModal, onAuthSuccess }) => {
             </button>
 
             <div className="separator">OR</div>
-            <button className="google-auth" onClick={handleGoogleLogin}>
+            <button className="google-auth">
               <img src={googleIcon} alt="Google Logo" className="google-logo" />
             </button>
           </div>

@@ -7,7 +7,7 @@ import NavBar from "../NavBar";
 const LandingPage = ({ setShowAuthModal }) => {
     return (
       <>
-        <NavBar />
+        <NavBar hideStats={true} /> 
         <div className="landing-container-lp">
           <div className="hero-section-lp">
             <div className="hero-text-lp">

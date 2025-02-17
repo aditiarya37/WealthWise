@@ -16,7 +16,7 @@ const ProfilePage = () => {
                 className="profile-image"
             />
             <img
-                src="/gold-league-withoutbg.png"  // Ensure badge.png is in the public folder
+                src="/gold-league-withoutbg.png"
                 alt="Badge"
                 className="overlay-image"
             />

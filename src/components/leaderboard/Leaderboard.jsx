@@ -33,7 +33,7 @@ const generateStreakDots = (days) => {
 
 const Leaderboard = () => {
   const leagueTiers = ["Iron", "Bronze", "Silver", "Gold", "Obsidian", "Master", "Grand Master"];
-  const currentLeague = "Gold"; // Set the current league dynamically if needed
+  const currentLeague = "Gold";
 
   return (
     <>

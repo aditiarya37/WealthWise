@@ -5,27 +5,27 @@ const questions = [
   {
     question: "What does a debit transaction do to your bank account?",
     options: ["Increases the balance", "Decreases the balance", "Transfers funds between accounts", "Has no effect on the balance"],
-    correct: 1, // B (index 1)
+    correct: 1,
   },
   {
     question: "Which of the following is an example of a credit transaction?",
     options: ["Paying your electricity bill", "Withdrawing cash from an ATM", "Receiving your salary", "Purchasing groceries"],
-    correct: 2, // C (index 2)
+    correct: 2,
   },
   {
     question: "How can the term debit be defined in simple terms?",
     options: ["Money flowing into your account", "Money flowing out of your account", "No change to your account balance", "Blocking an account transaction"],
-    correct: 1, // B (index 1)
+    correct: 1,
   },
   {
     question: "If you use your debit card to buy groceries, what happens?",
     options: ["Your bank account is credited", "Your bank account is debited", "No change to the account", "Your bank sends you interest"],
-    correct: 1, // B (index 1)
+    correct: 1,
   },
   {
     question: "In banking terms, what does 'credit' mean for your account?",
     options: ["You lose money", "More money is added to your account", "The account is frozen", "Money is withdrawn"],
-    correct: 1, // B (index 1)
+    correct: 1,
   },
 ];
 
@@ -41,7 +41,7 @@ const Quiz1 = () => {
   };
 
   const nextPage = () => {
-    setCurrentStep(1); // Show next set of questions
+    setCurrentStep(1);
   };
 
   const submitQuiz = () => {

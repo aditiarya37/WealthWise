@@ -15,10 +15,9 @@ import ProfilePage from "./components/profilePage/ProfilePage.jsx";
 const AppRoutes = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const navigate = useNavigate(); // ✅ Now useNavigate() is inside a Router component
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Check local storage or session to persist login state
     const loggedInUser = localStorage.getItem("user");
     if (loggedInUser) {
       setIsAuthenticated(true);
@@ -27,9 +26,9 @@ const AppRoutes = () => {
 
   const handleAuthSuccess = () => {
     setIsAuthenticated(true);
-    localStorage.setItem("user", "authenticated"); // Store login status
+    localStorage.setItem("user", "authenticated");
     setShowAuthModal(false);
-    navigate("/"); // Redirect to home page after login
+    navigate("/");
   };
 
   return (

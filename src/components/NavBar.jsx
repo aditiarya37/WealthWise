@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import logo from "../assets/WealthWiseIcon.png";
-import ProfileDropdown from "./ProfileDropdown"; // Import this
+import ProfileDropdown from "./ProfileDropdown";
 
 const NavBar = ({ hideStats }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,7 +34,6 @@ const NavBar = ({ hideStats }) => {
         <Link to="#">Insights</Link>
       </div>
 
-      {/* XP, Tokens, and Profile Dropdown (Hidden when hideStats is true) */}
       {!hideStats && (
         <div className="nav-right">
           <div className="xp-box"><span>⭐ 2,740 XP</span></div>

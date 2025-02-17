@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
+import { useNavigate } from "react-router-dom";
 import "./ProfileDropdown.css";
 import profileIcon from "../assets/ProfileIcon.png";
-import AuthModal from "./AuthModal"; // Import the modal
+import AuthModal from "./AuthModal";
 
 const ProfileDropdown = () => {
   const [open, setOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [authType, setAuthType] = useState("login");
-  const navigate = useNavigate(); // ✅ Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleAuthClick = (type) => {
     setAuthType(type);
@@ -18,7 +18,7 @@ const ProfileDropdown = () => {
 
   const handleProfileClick = () => {
     setOpen(false);
-    navigate("/profile"); // ✅ Redirects to ProfilePage
+    navigate("/profile");
   };
 
   return (
@@ -33,7 +33,7 @@ const ProfileDropdown = () => {
             <button className="dropdown-item" onClick={handleProfileClick}>View Profile</button>
             <button className="dropdown-item" onClick={() => {
               localStorage.removeItem("user");
-              window.location.reload(); // Refresh page to show login modal again
+              window.location.reload();
             }}>
               Logout
             </button>

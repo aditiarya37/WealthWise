@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import "./QuickLessons.css";
 import walletIcon from "../assets/wallet-icon.png";
 import graphIcon from "../assets/graph-icon.png";
@@ -22,7 +22,7 @@ const lessons = [
 ];
 
 const QuickLessons = () => {
-  const navigate = useNavigate(); // Initialize navigate hook
+  const navigate = useNavigate();
 
   return (
     <div className="quick-lessons">
@@ -32,8 +32,8 @@ const QuickLessons = () => {
           <div 
             key={index} 
             className="lesson-card"
-            onClick={() => index === 0 && navigate("/roadmap/Introduction%20of%20Debit%20and%20Credit%20Cards")} // Navigate only on first lesson click
-            style={{ cursor: index === 0 ? "pointer" : "default" }} // Change cursor for first lesson
+            onClick={() => index === 0 && navigate("/roadmap/Introduction%20of%20Debit%20and%20Credit%20Cards")}
+            style={{ cursor: index === 0 ? "pointer" : "default" }}
           >
             <span className="lesson-icon">
               <img src={lesson.icon} alt={lesson.title} />

@@ -2,7 +2,7 @@ import React from "react";
 import "./CoursesList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faLock } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom"; // For navigation
+import { Link } from "react-router-dom";
 
 const courses = [
   {

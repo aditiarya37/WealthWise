@@ -1,12 +1,12 @@
 import React from "react";
-import "./CourseProgress.css"; // Import CSS if not using Tailwind
+import "./CourseProgress.css";
 
 const missions = [
   {
     level: "Easy",
     title: "Track Daily Expenses",
     xp: "+50 Xp",
-    progress: 40, // Percentage
+    progress: 40,
     color: "green",
   },
   {

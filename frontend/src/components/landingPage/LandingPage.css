@@ -1,0 +1,125 @@
+/* Main Landing Page Container */
+.landing-container-lp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background-color: white;
+    height: 100%;
+    border-radius: 8pxs;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  /* Hero Section Layout */
+  .hero-section-lp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px;
+  }
+  
+  /* Left Text Section */
+  .hero-text-lp {
+    flex: 1;
+    font-weight: 700;
+    max-width: 800px;
+  }
+  
+  .hero-text-lp h1 {
+    font-size: 50px;
+    font-weight: 700; /* Use 900 instead of 1000 */
+    color: #0a1d3d;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Ensure you use a bold font */
+}
+  
+  .hero-text-lp .highlight {
+    color: #2abd60; /* Green Text */
+  }
+
+  .hero-text-lp h2 {
+    font-size: 45px;
+    margin-top: 0px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Call-to-Action Buttons */
+  .cta-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .enroll-btn, .explore-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .enroll-btn {
+    background-color: #0a1d3d;
+    color: white;
+  }
+  
+  .explore-btn {
+    background-color: white;
+    color: #0a1d3d;
+    border: 2px solid #0a1d3d;
+  }
+  
+  .enroll-btn:hover {
+    box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+    /* transform: translateY(-5px); */
+    background-color: white;
+    color: #0a1d3d;
+    border: 2px solid #0a1d3d;
+  }
+
+  .explore-btn:hover {
+    box-shadow: 0 5px 20px rgba(0, 255, 100, 0.3);
+    /* transform: translateY(-5px); */
+    color: white;
+    background-color: #0a1d3d;
+  }
+  
+  /* Right Image Section */
+  .hero-image-container-lp {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-image-lp {
+    width: 52vw;
+    height: 83vh;
+    margin-right: -100px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .hero-section-lp {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .cta-buttons {
+      justify-content: center;
+    }
+  
+    .hero-text-lp {
+      max-width: 100%;
+    }
+  
+    .hero-image-lp {
+      max-width: 80%;
+      margin-top: 20px;
+    }
+  }
+  

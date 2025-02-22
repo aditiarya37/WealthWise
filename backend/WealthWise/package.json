@@ -1,0 +1,48 @@
+{
+  "name": "wealthwise",
+  "version": "1.0.0",
+  "description": "Backend for Wealthwise, a platform to teach financial concepts.",
+  "main": "backend.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node backend",
+    "dev": "cross-env NODE_ENV=development nodemon backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/aditiarya37/WealthWise"
+  },
+  "keywords": [
+    "finance",
+    "lessons",
+    "learning",
+    "backend",
+    "nodejs"
+  ],
+  "author": "Rehan Ahmed",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-handlebars": "^7.1.3",
+    "express-session": "^1.18.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "method-override": "^3.0.0",
+    "moment": "^2.30.1",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.9"
+  }
+}
